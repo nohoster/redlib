@@ -51,11 +51,11 @@ jobs:
       - name: Package release
         run: tar czf redlib-${{ matrix.target }}.tar.gz -C target/${{ matrix.target }}/release/ redlib
 
-      # - name: Upload release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     name: test
-      #     files: |
-      #       redlib-${{ matrix.target }}.tar.gz
+      - name: Upload release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: test
+          files: |
+            redlib-${{ matrix.target }}.tar.gz
 
 
